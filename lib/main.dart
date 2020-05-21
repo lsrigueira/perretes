@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -30,9 +31,22 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("Perretes"),
         ),
-        body: Center(
-          child: Text("App para perretes s"),
-        ),
+        body: Stack(
+          children: <Widget>[
+            Column(
+              children: <Widget>[
+                Image.asset(
+                  "assets/golden.jpg",
+                  fit: BoxFit.fitHeight,
+                  //fit: BoxFit.fitHeight,
+                ),
+              ],
+            ),
+            Center(
+              child: Text("App para perretes s"),
+            ),
+          ],
+        )
       )
     );
   }
@@ -42,7 +56,7 @@ class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
 
   // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
+  // that itf has a State object (defined below) that contains fields that affect
   // how it looks.
 
   // This class is the configuration for the state. It holds the values (in this
