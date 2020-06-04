@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:proyectoprova/description_place.dart';
 
 void main() {
   runApp(MyApp());
@@ -31,22 +32,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("Perretes"),
         ),
-        body: Stack(
-          children: <Widget>[
-            Column(
-              children: <Widget>[
-                Image.asset(
-                  "assets/golden.jpg",
-                  fit: BoxFit.fitHeight,
-                  //fit: BoxFit.fitHeight,
-                ),
-              ],
-            ),
-            Center(
-              child: Text("App para perretes s"),
-            ),
-          ],
-        )
+          body: new DescriptionPlace("Laika",4,"lore ipsum"),
       )
     );
   }
